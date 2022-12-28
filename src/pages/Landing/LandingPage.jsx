@@ -55,7 +55,7 @@ const LandingPage = () => {
             <div className="row">
                 <PrimaryCarousel />
             </div>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center children__elements--mt-15-mb-15">
                 <h1 className="col-12">No es lo mismo educar, que entrenar</h1>
                 <h6 className="col-12">¿Quieres esaber cuál es la diferencia?</h6>
                 <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1" action={() => navigate('/about')} />
