@@ -1,4 +1,8 @@
+//imports
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+//components
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 import LandingCard from '../../components/Cards/Landing Product Card/LandingCard';
 import PrimaryCarousel from '../../components/Carousel/PrimaryCarousel';
@@ -6,6 +10,9 @@ import Logo from '../../components/Logos/Primary Logo/Logo';
 import OptionMenu from '../../components/Menus/OptionMenu';
 
 const LandingPage = () => {
+    //hooks
+    const navigate = useNavigate();
+
     const optionMenu = [
         {
             name: 'Option 1',
@@ -51,7 +58,7 @@ const LandingPage = () => {
             <div className="row justify-content-center">
                 <h1 className="col-12">No es lo mismo educar, que entrenar</h1>
                 <h6 className="col-12">¿Quieres esaber cuál es la diferencia?</h6>
-                <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1" />
+                <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1" action={() => navigate('/about')} />
             </div>
             <div className="row my-5">
                 <h2 className="col-12">¿Como empezar?</h2>
@@ -59,7 +66,7 @@ const LandingPage = () => {
             </div>
             <div className="row justify-content-center">
                 {landingCards.map((card, index) => (
-                    <LandingCard key={index} cardImg={card.img} cardTitle={card.title} cardDescription={card.description}/>
+                    <LandingCard key={index} cardImg={card.img} cardTitle={card.title} cardDescription={card.description} />
                 ))}
             </div>
         </div>

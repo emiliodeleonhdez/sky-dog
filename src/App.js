@@ -1,6 +1,11 @@
+//styles
 import './App.scss';
-import LandingPage from './pages/Landing/LandingPage';
+
+//imports
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+//pages
+import LandingPage from './pages/Landing/LandingPage';
 import AboutMe from './pages/About me/AboutMe';
 
 function App() {
