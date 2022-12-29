@@ -34,10 +34,7 @@ const LandingPage = () => {
     return (
         <>
             <PrimaryHeader />
-            <div className="container">
-                <div className="row">
-                    <PrimaryCarousel />
-                </div>
+            <div className="container my-3">
                 <div className="row justify-content-center children__elements--mt-15-mb-15">
                     <h1 className="col-12 text-center">No es lo mismo educar, que entrenar</h1>
                     <h6 className="col-12 text-center">¿Quieres esaber cuál es la diferencia?</h6>
@@ -51,6 +48,9 @@ const LandingPage = () => {
                     {landingCards.map((card, index) => (
                         <LandingCard key={index} cardImg={card.img} cardTitle={card.title} cardDescription={card.description} />
                     ))}
+                </div>
+                <div className="row">
+                    <PrimaryCarousel />
                 </div>
             </div>
             <PrimaryFooter/>

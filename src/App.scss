@@ -88,7 +88,6 @@ a:hover {
     width: 50%;
     height: auto;
     max-width: 300px;
-    
 }
 
 .footer__social-media {
@@ -96,9 +95,15 @@ a:hover {
     background-color: $sky-dog-white-color;
     font-size: 32px;
     color: $sky-dog-secondary-color;
+    .footer__social-media-icons {
+        width: 180px;
+        text-align: center;
+
+        > * {
+            margin: 0 15px 0 15px;
+        }
+    }
     .footer__copy-right {
         font-size: 10px;
     }
-    
-
 }

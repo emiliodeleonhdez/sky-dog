@@ -30,7 +30,7 @@ const AboutMe = () => {
     return (
         <>
             <PrimaryHeader />
-            <div className="container">
+            <div className="container my-3">
                 <div className="row text-center children__elements--mt-15-mb-15">
                     <h1 className="col-12">¡Hola soy Ivonne Gonzalez!</h1>
                     <div>
