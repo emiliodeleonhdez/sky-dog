@@ -1,10 +1,10 @@
 import React from 'react';
 import Logo from '../Logos/Primary Logo/Logo';
 import OptionMenu from '../Menus/OptionMenu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons'
+import OffCanvas from '../Sidebars/PrimaryOffCanvas';
 
 const PrimaryHeader = () => {
+
     const optionMenu = [
         {
             name: 'Home',
@@ -21,10 +21,10 @@ const PrimaryHeader = () => {
     ];
     return (
         <div className="container__header--sticky d-flex align-items-center justify-content-around">
-            <FontAwesomeIcon icon={faBars} className="d-md-none" onClick={() => alert("yes")}/>
+            <OffCanvas/>
             <Logo></Logo>
             <div className="option__menu d-none d-md-flex">
-                <OptionMenu displayOptions={optionMenu} />
+                <OptionMenu displayOptions={optionMenu} customClasses='d-flex container__header-options' anchorClasses='col-4 text-center'/>
             </div>
         </div>
     );

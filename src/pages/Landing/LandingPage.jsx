@@ -6,8 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 import LandingCard from '../../components/Cards/Landing Product Card/LandingCard';
 import PrimaryCarousel from '../../components/Carousel/PrimaryCarousel';
-import PrimaryFooter from '../../components/Footer/PrimaryFooter';
-import PrimaryHeader from '../../components/Header/PrimaryHeader';
+
+//illustrations
+import skyDogDoggy from '../../assets/illustrations/sky-dog-doggy.svg';
 
 const LandingPage = () => {
     //hooks
@@ -33,10 +34,10 @@ const LandingPage = () => {
 
     return (
         <>
-            <PrimaryHeader />
             <div className="container my-3">
                 <div className="row justify-content-center children__elements--mt-15-mb-15">
                     <h1 className="col-12 text-center">No es lo mismo educar, que entrenar</h1>
+                    <img className="landing__doggy-illustration" src={skyDogDoggy} alt="" />
                     <h6 className="col-12 text-center">¿Quieres esaber cuál es la diferencia?</h6>
                     <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1" action={() => navigate('/about')} />
                 </div>
@@ -53,7 +54,6 @@ const LandingPage = () => {
                     <PrimaryCarousel />
                 </div>
             </div>
-            <PrimaryFooter/>
         </>
     );
 };

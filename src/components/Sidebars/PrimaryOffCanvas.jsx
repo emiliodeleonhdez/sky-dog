@@ -1,35 +1,39 @@
 import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import PrimaryButton from '../Buttons/PrimaryButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import OptionMenu from '../Menus/OptionMenu';
 
-const PrimaryOffCanvas = (props) => {
+const OffCanvas = (props) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const toggleShow = () => setShow((s) => !s);
+    const optionMenu = [
+        {
+            name: 'Home',
+            nav: '/'
+        },
+        {
+            name: 'Nosotros',
+            nav: '/about'
+        },
+        {
+            name: 'Productos',
+            nav: 'www.twitter.com'
+        }
+    ];
 
     return (
         <>
-            <PrimaryButton variant="primary" text="offcanvas" action={() => toggleShow()} />
-            <Offcanvas show={show} onHide={handleClose} {...props}>
+        {console.log(props.show)}
+            <FontAwesomeIcon icon={faBars} className="d-md-none" onClick={() => setShow(true)} />
+            <Offcanvas show={show || props.show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    <Offcanvas.Title>Sky Dog | Educación Canina</Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</Offcanvas.Body>
+                <Offcanvas.Body>
+                    <OptionMenu onClick={()=> alert("click")} displayOptions={optionMenu} customClasses='d-flex container__header-options flex-column' anchorClasses='col-4 text-left'/>
+                </Offcanvas.Body>
             </Offcanvas>
-        </>
-    );
-};
-
-const OffCanvas = () => {
-
-    const config = {
-        scroll: true,
-        backdrop: true
-    };
-
-    return (
-        <>
-            <PrimaryOffCanvas {...config} />
         </>
     );
 };

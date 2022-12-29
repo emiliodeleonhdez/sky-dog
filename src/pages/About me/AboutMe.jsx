@@ -1,6 +1,4 @@
 import React from 'react';
-import PrimaryFooter from '../../components/Footer/PrimaryFooter';
-import PrimaryHeader from '../../components/Header/PrimaryHeader';
 import Steps from '../../components/Steps/Steps';
 
 const AboutMe = () => {
@@ -29,7 +27,6 @@ const AboutMe = () => {
     ];
     return (
         <>
-            <PrimaryHeader />
             <div className="container my-3">
                 <div className="row text-center children__elements--mt-15-mb-15">
                     <h1 className="col-12">¡Hola soy Ivonne Gonzalez!</h1>
@@ -48,8 +45,6 @@ const AboutMe = () => {
                     ))}
                 </div>
             </div>
-            <PrimaryFooter/>
-
         </>
     );
 };

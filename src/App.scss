@@ -20,12 +20,14 @@ h6 {
 
 a {
     color: $sky-dog-secondary-color !important;
+    text-decoration: none;
+    &:hover {
+        font-weight: bold;
+        border-bottom: 2px solid $sky-dog-secondary-color;
+    }
 }
 
-a:hover {
-    font-weight: bold;
-    border-bottom: 2px solid $sky-dog-secondary-color;
-}
+
 
 .option__menu {
     margin: 15px 0 15px 0;
@@ -37,6 +39,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     img {
         width: 100px;
         height: 100px;
@@ -106,4 +112,8 @@ a:hover {
     .footer__copy-right {
         font-size: 10px;
     }
+}
+
+.landing__doggy-illustration {
+    max-width: 350px;
 }
