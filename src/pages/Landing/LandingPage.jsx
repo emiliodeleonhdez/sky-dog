@@ -6,28 +6,12 @@ import { useNavigate } from 'react-router-dom';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 import LandingCard from '../../components/Cards/Landing Product Card/LandingCard';
 import PrimaryCarousel from '../../components/Carousel/PrimaryCarousel';
-import Logo from '../../components/Logos/Primary Logo/Logo';
-import OptionMenu from '../../components/Menus/OptionMenu';
+import PrimaryHeader from '../../components/Header/PrimaryHeader';
 
 const LandingPage = () => {
     //hooks
     const navigate = useNavigate();
-
-    const optionMenu = [
-        {
-            name: 'Option 1',
-            nav: 'www.google.com'
-        },
-        {
-            name: 'Option 2',
-            nav: 'www.facebook.com'
-        },
-        {
-            name: 'Option 2',
-            nav: 'www.twitter.com'
-        }
-    ];
-
+    
     const landingCards = [
         {
             img: '',
@@ -48,10 +32,7 @@ const LandingPage = () => {
 
     return (
         <div className="container">
-            <Logo />
-            <div className="option__menu">
-                <OptionMenu displayOptions={optionMenu} />
-            </div>
+            <PrimaryHeader />
             <div className="row">
                 <PrimaryCarousel />
             </div>

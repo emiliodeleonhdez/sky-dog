@@ -1,85 +1,43 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-@import "./styles/vars.scss";
+@import './styles/vars.scss';
 
-.App {
-    text-align: center;
-    .option__menu {
-      margin: 15px 0 15px 0;
-    }
-    .button__landing--100w {
-      width: 100px;
-    }
-    .landing__card {
-      img {
+.option__menu {
+    margin: 15px 0 15px 0;
+}
+.button__landing--100w {
+    width: 100px;
+}
+.landing__card {
+    img {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-      }
-    }
-    .children__elements--mt-15-mb-15 > *{
-      margin: 15px 0 15px 0;
-    }
-    .p__align-left {
-      text-align: left;
-    }
-
-    .div__steps-step-number {
-      border: 5px solid $sky-dog-purple-color;
-      border-radius: 50%;
-      width: 90px;
-      height: 90px;
-      margin: 15px 0 15px 0;
-    }
-    .h6__steps-step-number {
-      color: $sky-dog-purple-color;
-      position: relative;
-      top: 33%
-    }
-
-    .container__header--sticky {
-      position: sticky;
-      top: 0px;
-      background-color: white;
-      z-index: 5;
     }
 }
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.children__elements--mt-15-mb-15 > * {
+    margin: 15px 0 15px 0;
+}
+.p__align-left {
+    text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.div__steps-step-number {
+    border: 5px solid $sky-dog-purple-color;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: 15px 0 15px 0;
+}
+.h6__steps-step-number {
+    color: $sky-dog-purple-color;
+    position: relative;
+    top: 33%;
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.Hello-world {
-    color: red;
+.container__header--sticky {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 5;
 }

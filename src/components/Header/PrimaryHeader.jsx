@@ -5,22 +5,22 @@ import OptionMenu from '../Menus/OptionMenu';
 const PrimaryHeader = () => {
     const optionMenu = [
         {
-            name: 'Option 1',
-            nav: 'www.google.com'
+            name: 'Home',
+            nav: '/'
         },
         {
-            name: 'Option 2',
-            nav: 'www.facebook.com'
+            name: 'Nosotros',
+            nav: '/about'
         },
         {
-            name: 'Option 2',
+            name: 'Productos',
             nav: 'www.twitter.com'
         }
-    ]
+    ];
     return (
-        <div className='container__header--sticky'>
+        <div className="container__header--sticky d-flex flex-column align-items-center">
             <Logo></Logo>
-            <div className="option__menu">
+            <div className="container option__menu">
                 <OptionMenu displayOptions={optionMenu} />
             </div>
         </div>
