@@ -3,7 +3,7 @@ import logo from '../../../assets/logo/sky-dog-logo.png'
 
 const Logo = () => {
   return (
-    <><img src={logo} alt="logo" /></>
+    <><img className='logo__sky-dog' src={logo} alt="logo" /></>
   )
 }
 

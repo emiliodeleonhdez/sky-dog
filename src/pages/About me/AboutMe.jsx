@@ -1,5 +1,5 @@
 import React from 'react';
-import PrimaryCarousel from '../../components/Carousel/PrimaryCarousel';
+import PrimaryFooter from '../../components/Footer/PrimaryFooter';
 import PrimaryHeader from '../../components/Header/PrimaryHeader';
 import Steps from '../../components/Steps/Steps';
 
@@ -31,13 +31,16 @@ const AboutMe = () => {
         <>
             <PrimaryHeader />
             <div className="container">
-                <div className="row">
-                    <PrimaryCarousel />
-                </div>
-                <div className="row justify-content-center children__elements--mt-15-mb-15">
+                <div className="row text-center children__elements--mt-15-mb-15">
                     <h1 className="col-12">¡Hola soy Ivonne Gonzalez!</h1>
+                    <div>
+                        <img className="img__sky-dog-user" src="https://randomuser.me/api/portraits/women/56.jpg" alt="" />
+                    </div>
                     <h6 className="col-12">Soy médico veterinario zootecnista, egresada de la UAM y máster en etología en animales de compañía, por la UAB.</h6>
                     <p className="col- 12 p__align-left">Cuento con más de 7 años dedicándome a educación canina, colaborando estrechamente con cada familia para mejorar los problemas de comportamiento de sus perros y mejorando su vínculo afectivo. Educación canina brindada mediante entrenamiento positivo, buscando reforzar el vínculo afectivo que cada tutor tiene con su perro</p>
+                </div>
+                <div className="row my-5">
+                    <h2 className="col text-center">Te cuento como:</h2>
                 </div>
                 <div className="row">
                     {stepsInformation.map((step, index) => (
@@ -45,6 +48,8 @@ const AboutMe = () => {
                     ))}
                 </div>
             </div>
+            <PrimaryFooter/>
+
         </>
     );
 };

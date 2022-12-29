@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '../Logos/Primary Logo/Logo';
 import OptionMenu from '../Menus/OptionMenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons'
 
 const PrimaryHeader = () => {
     const optionMenu = [
@@ -18,9 +20,10 @@ const PrimaryHeader = () => {
         }
     ];
     return (
-        <div className="container__header--sticky d-flex flex-column align-items-center">
+        <div className="container__header--sticky d-flex align-items-center justify-content-around">
+            <FontAwesomeIcon icon={faBars} className="d-md-none" onClick={() => alert("yes")}/>
             <Logo></Logo>
-            <div className="container option__menu">
+            <div className="option__menu d-none d-md-flex">
                 <OptionMenu displayOptions={optionMenu} />
             </div>
         </div>

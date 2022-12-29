@@ -2,6 +2,31 @@
 @import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 @import './styles/vars.scss';
 
+@mixin sky-dog-primary-user-picture($border-color) {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid $border-color;
+}
+
+h1 {
+    color: $sky-dog-primary-color;
+}
+
+h5,
+h6 {
+    color: black;
+}
+
+a {
+    color: $sky-dog-secondary-color !important;
+}
+
+a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid $sky-dog-secondary-color;
+}
+
 .option__menu {
     margin: 15px 0 15px 0;
 }
@@ -9,10 +34,16 @@
     width: 100px;
 }
 .landing__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img {
         width: 100px;
         height: 100px;
         border-radius: 50%;
+    }
+    > * {
+        margin: 10px 0 10px 0;
     }
 }
 .children__elements--mt-15-mb-15 > * {
@@ -22,22 +53,52 @@
     text-align: left;
 }
 
+.img__sky-dog-user {
+    @include sky-dog-primary-user-picture($sky-dog-primary-color);
+}
+
 .div__steps-step-number {
-    border: 5px solid $sky-dog-purple-color;
+    border: 5px solid $sky-dog-primary-color;
     border-radius: 50%;
     width: 90px;
     height: 90px;
     margin: 15px 0 15px 0;
 }
+
 .h6__steps-step-number {
-    color: $sky-dog-purple-color;
-    position: relative;
-    top: 33%;
+    color: $sky-dog-primary-color;
 }
 
 .container__header--sticky {
     position: sticky;
     top: 0px;
-    background-color: white;
+    background-color: $sky-dog-white-color;
     z-index: 5;
+    svg {
+        font-size: 24px;
+        color: $sky-dog-secondary-color;
+    }
+}
+
+.container__header-options {
+    width: 400px;
+}
+
+.logo__sky-dog {
+    width: 50%;
+    height: auto;
+    max-width: 300px;
+    
+}
+
+.footer__social-media {
+    height: 90px;
+    background-color: $sky-dog-white-color;
+    font-size: 32px;
+    color: $sky-dog-secondary-color;
+    .footer__copy-right {
+        font-size: 10px;
+    }
+    
+
 }
