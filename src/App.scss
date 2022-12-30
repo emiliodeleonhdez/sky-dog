@@ -117,3 +117,18 @@ a {
 .landing__doggy-illustration {
     max-width: 350px;
 }
+
+.not-found__container {
+    height: 85vh;
+    > * {
+        margin: 5px;
+    }
+    svg {
+        font-size: 56px;
+        color: $sky-dog-secondary-color;
+    }
+}
+
+.off-canvas__custom-width {
+    width: 70%!important;
+}

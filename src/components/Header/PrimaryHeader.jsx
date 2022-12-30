@@ -16,7 +16,7 @@ const PrimaryHeader = () => {
         },
         {
             name: 'Productos',
-            nav: 'www.twitter.com'
+            nav: '/products'
         }
     ];
     return (

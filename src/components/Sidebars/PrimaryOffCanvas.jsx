@@ -18,20 +18,19 @@ const OffCanvas = (props) => {
         },
         {
             name: 'Productos',
-            nav: 'www.twitter.com'
+            nav: '/products'
         }
     ];
 
     return (
         <>
-        {console.log(props.show)}
             <FontAwesomeIcon icon={faBars} className="d-md-none" onClick={() => setShow(true)} />
-            <Offcanvas show={show || props.show} onHide={handleClose}>
+            <Offcanvas show={show || props.show} onHide={handleClose} className='off-canvas__custom-width'>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Sky Dog | Educación Canina</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <OptionMenu onClick={()=> alert("click")} displayOptions={optionMenu} customClasses='d-flex container__header-options flex-column' anchorClasses='col-4 text-left'/>
+                    <OptionMenu displayOptions={optionMenu} customClasses='d-flex container__header-options flex-column' anchorClasses='col-4 text-left'/>
                 </Offcanvas.Body>
             </Offcanvas>
         </>
