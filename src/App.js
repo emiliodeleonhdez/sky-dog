@@ -20,6 +20,7 @@ function App() {
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/about" element={<AboutMe />} />
                     <Route path="/products" element={<NotFound />} />
+                    <Route path="/notfound" element={<NotFound />} />
                 </Routes>
                 <PrimaryFooter />
             </BrowserRouter>
