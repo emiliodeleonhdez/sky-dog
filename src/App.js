@@ -10,6 +10,7 @@ import AboutMe from './pages/About me/AboutMe';
 import PrimaryHeader from './components/Header/PrimaryHeader';
 import PrimaryFooter from './components/Footer/PrimaryFooter';
 import NotFound from './pages/404/NotFound';
+import Products from './pages/Products/Products';
 
 function App() {
     return (
@@ -19,7 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/about" element={<AboutMe />} />
-                    <Route path="/products" element={<NotFound />} />
+                    <Route path="/products" element={<Products />} />
                     <Route path="/notfound" element={<NotFound />} />
                 </Routes>
                 <PrimaryFooter />

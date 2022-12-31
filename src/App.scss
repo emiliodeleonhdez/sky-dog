@@ -1,12 +1,39 @@
+@import './styles/vars.scss';
+
+
+//over-write bootstrap classes
+$primary: $sky-dog-primary-color;
+$secondary: $sky-dog-secondary-color;
+//
+
 @import '~bootstrap/scss/bootstrap';
 @import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-@import './styles/vars.scss';
 
 @mixin sky-dog-primary-user-picture($border-color) {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     border: 5px solid $border-color;
+}
+
+@mixin sky-dog-standard-card(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+@mixin sky-dog-card-img() {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+@mixin  sky-dow-children-m-10px() {
+    margin: 10px 0 10px 0;
 }
 
 h1 {
@@ -27,8 +54,6 @@ a {
     }
 }
 
-
-
 .option__menu {
     margin: 15px 0 15px 0;
 }
@@ -44,12 +69,10 @@ a {
     height: 350px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
+        @include sky-dog-card-img();
     }
     > * {
-        margin: 10px 0 10px 0;
+        @include sky-dow-children-m-10px();
     }
 }
 .children__elements--mt-15-mb-15 > * {
@@ -131,4 +154,18 @@ a {
 
 .off-canvas__custom-width {
     width: 70%!important;
+}
+
+.container__product-card {
+    @include sky-dog-standard-card();
+    img {
+        @include sky-dog-card-img()
+    }
+    > * {
+        @include sky-dow-children-m-10px();
+    }
+}
+
+.secondary__color {
+    background-color: $sky-dog-secondary-color!important;
 }

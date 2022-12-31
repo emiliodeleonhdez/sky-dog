@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 //components
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
-import LandingCard from '../../components/Cards/Landing Product Card/LandingCard';
+import LandingCard from '../../components/Cards/Landing/LandingCard';
 import PrimaryCarousel from '../../components/Carousel/PrimaryCarousel';
 
 //illustrations
@@ -39,7 +39,7 @@ const LandingPage = () => {
                     <h1 className="col-12 text-center">No es lo mismo educar, que entrenar</h1>
                     <img className="landing__doggy-illustration" src={skyDogDoggy} alt="" />
                     <h6 className="col-12 text-center">¿Quieres esaber cuál es la diferencia?</h6>
-                    <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1" action={() => navigate('/about')} />
+                    <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1 text-light" action={() => navigate('/about')} />
                 </div>
                 <div className="row my-5">
                     <h2 className="col-12 text-center">¿Como empezar?</h2>

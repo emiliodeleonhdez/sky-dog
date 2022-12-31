@@ -6,15 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 
 const OffCanvas = (props) => {
-    console.log(props)
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
 
     const handleClose = () => setShow(false);
     const handleClick = (path) => {
-        navigate(path)
-        setShow(false)
-    }
+        navigate(path);
+        setShow(false);
+    };
 
     const optionMenu = [
         {
@@ -22,7 +21,7 @@ const OffCanvas = (props) => {
             nav: '/'
         },
         {
-            name: 'Nosotros',
+            name: '¡Soy Ivonne!',
             nav: '/about'
         },
         {
@@ -32,17 +31,21 @@ const OffCanvas = (props) => {
     ];
 
     return (
-        <>
-            <FontAwesomeIcon icon={faBars} className="d-md-none" onClick={() => setShow(true)} />
-            <Offcanvas show={show} onHide={handleClose} className="off-canvas__custom-width">
+        <div className="d-md-none">
+            <FontAwesomeIcon icon={faBars} onClick={() => setShow(true)} />
+            <Offcanvas show={show} onHide={handleClose} responsive='md' className="off-canvas__custom-width">
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Sky Dog Educación Canina</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                {optionMenu.map((option, index) => <Nav.Link key={index} onClick={()=> handleClick(option.nav)} className={props.anchorClasses}>{option.name}</Nav.Link>)}
+                    {optionMenu.map((option, index) => (
+                        <Nav.Link key={index} onClick={() => handleClick(option.nav)} className={props.anchorClasses}>
+                            {option.name}
+                        </Nav.Link>
+                    ))}
                 </Offcanvas.Body>
             </Offcanvas>
-        </>
+        </div>
     );
 };
 

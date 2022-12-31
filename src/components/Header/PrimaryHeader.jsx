@@ -11,7 +11,7 @@ const PrimaryHeader = () => {
             nav: '/'
         },
         {
-            name: 'Nosotros',
+            name: '¡Soy Ivonne!',
             nav: '/about'
         },
         {
@@ -19,6 +19,7 @@ const PrimaryHeader = () => {
             nav: '/products'
         }
     ];
+
     return (
         <div className="container__header--sticky d-flex align-items-center justify-content-around">
             <OffCanvas />
