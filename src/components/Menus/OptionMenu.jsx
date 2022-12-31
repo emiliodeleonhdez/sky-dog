@@ -1,16 +1,31 @@
-import React from 'react'
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { useNavigate } from 'react-router-dom';
+import WhatsappButton from '../Buttons/WhatsAppButton/WhatsappButton';
 
 const OptionMenu = (props) => {
+    const navigate = useNavigate();
+    const handleClick = (path) => {
+        navigate(path);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    };
 
-  const navigate = useNavigate();
+    return (
+        <>
+            <div className={props.customClasses}>
+                {props.displayOptions.map((option, index) => (
+                    <Nav.Link key={index} onClick={() => handleClick(option.nav)} className={props.anchorClasses}>
+                        {option.name}
+                    </Nav.Link>
+                ))}
+            </div>
+            <WhatsappButton />
+        </>
+    );
+};
 
-  return (
-    <div className={props.customClasses}>
-        {props.displayOptions.map((option, index) => <Nav.Link key={index} eventKey={index} onSelect={(selectedKey)=>  alert(`selected ${selectedKey}`)} onClick={()=> navigate(option.nav)} className={props.anchorClasses}>{option.name}</Nav.Link>)}
-    </div>
-  )
-}
-
-export default OptionMenu
+export default OptionMenu;

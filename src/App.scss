@@ -115,7 +115,10 @@ a {
 .logo__sky-dog {
     width: 50%;
     height: auto;
-    max-width: 300px;
+    max-width: 150px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .footer__social-media {
@@ -151,10 +154,6 @@ a {
     }
 }
 
-.off-canvas__custom-width {
-    width: 70% !important;
-}
-
 .container__product-card {
     @include sky-dog-standard-card();
     img {
@@ -170,28 +169,21 @@ a {
 }
 
 .button__whats-app-button {
-    width: 56px;
-    height: 56px;
-    z-index: 1000;
-    border-radius: 50%;
-    border: 1px solid $sky-dog-gray-color;
-    background-color: white;
-    position: fixed;
-    bottom: 70%;
-    left: 80%;
     opacity: 0.5;
-    svg {
-        font-size: 32px;
+    font-size: 24px;
+    .button__whats-app-button--32px {
+        font-size: 32px !important;
     }
     &:hover {
-        border: 1px solid $sky-dog-secondary-color;
         cursor: pointer;
         opacity: 1;
-        svg {
-            color: $sky-dog-secondary-color;
-        }
+        color: $sky-dog-primary-color;
         a {
             border: none !important;
         }
     }
+}
+
+.off-canvas__anchor-text--32px {
+    font-size: 32px;
 }
