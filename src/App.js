@@ -11,12 +11,14 @@ import PrimaryHeader from './components/Header/PrimaryHeader';
 import PrimaryFooter from './components/Footer/PrimaryFooter';
 import NotFound from './pages/404/NotFound';
 import Products from './pages/Products/Products';
+import WhatsappButton from './components/Buttons/WhatsAppButton/WhatsappButton';
 
 function App() {
     return (
         <>
             <BrowserRouter>
                 <PrimaryHeader />
+                <WhatsappButton/>
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/about" element={<AboutMe />} />

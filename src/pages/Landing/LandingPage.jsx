@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //components
-import PrimaryButton from '../../components/Buttons/PrimaryButton';
+import PrimaryButton from '../../components/Buttons/PrimaryButton/PrimaryButton';
 import LandingCard from '../../components/Cards/Landing/LandingCard';
 import PrimaryCarousel from '../../components/Carousel/PrimaryCarousel';
 

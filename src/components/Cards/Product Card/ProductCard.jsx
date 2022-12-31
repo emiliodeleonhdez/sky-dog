@@ -1,6 +1,6 @@
 import React from 'react';
 import placeholderImg from '../../../assets/carousel/asset1.jpg'
-import PrimaryButton from '../../Buttons/PrimaryButton';
+import PrimaryButton from '../../Buttons/PrimaryButton/PrimaryButton';
 
 
 const ProductCard = (props) => {
