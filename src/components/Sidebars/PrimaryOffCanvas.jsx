@@ -31,8 +31,8 @@ const OffCanvas = (props) => {
             nav: '/about'
         },
         {
-            name: 'Productos',
-            nav: '/products'
+            name: 'Servicios',
+            nav: '/services'
         }
     ];
 

@@ -19,9 +19,10 @@ $secondary: $sky-dog-secondary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-radius: 15px;
     width: 300px;
-    height: 350px;
+    min-height: 400px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
@@ -62,6 +63,7 @@ a {
 .landing__card {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 15px;
     width: 300px;
@@ -186,4 +188,10 @@ a {
 
 .off-canvas__anchor-text--32px {
     font-size: 32px;
+}
+
+.login__form-container {
+    .login__form-button{
+        width: 33%;
+    }
 }

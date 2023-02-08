@@ -14,8 +14,8 @@ const PrimaryHeader = () => {
             nav: '/about'
         },
         {
-            name: 'Productos',
-            nav: '/products'
+            name: 'Servicios',
+            nav: '/services'
         }
     ];
 
