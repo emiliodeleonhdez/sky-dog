@@ -6,17 +6,22 @@ import OffCanvas from '../Sidebars/PrimaryOffCanvas';
 const PrimaryHeader = () => {
     const optionMenu = [
         {
-            name: 'Home',
+            name: 'Inicio',
             nav: '/'
-        },
-        {
-            name: '¡Soy Ivonne!',
-            nav: '/about'
         },
         {
             name: 'Servicios',
             nav: '/services'
+        },
+        {
+            name: '¡Conóceme!',
+            nav: '/about'
+        },
+        {
+            name: 'Galería',
+            nav: '/about'
         }
+
     ];
 
     return (

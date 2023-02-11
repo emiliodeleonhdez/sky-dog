@@ -1,7 +1,7 @@
 @import './styles/vars.scss';
 
 //over-write bootstrap classes
-$primary: $sky-dog-primary-color;
+$primary: $pink-brownie;
 $secondary: $sky-dog-secondary-color;
 //
 
@@ -36,8 +36,17 @@ $secondary: $sky-dog-secondary-color;
     margin: 10px 0 10px 0;
 }
 
+body {
+    background-color: $pink-nala;
+}
+
+
 h1 {
-    color: $sky-dog-primary-color;
+    color: $black-merlina;
+}
+
+h2 {
+    color: $sky-dog-secondary-color
 }
 
 h5,
@@ -46,20 +55,71 @@ h6 {
 }
 
 a {
-    color: $sky-dog-secondary-color !important;
+    color: $sky-dog-secondary-support-color !important;
+    font-weight: 600 !important;
     text-decoration: none;
+
     &:hover {
-        // font-weight: bold;
-        border-bottom: 1px solid $sky-dog-secondary-color;
+        color: $sky-dog-primary-color !important;
     }
+}
+
+svg {
+    color: $sky-dog-secondary-color;
+
+    &:hover {
+        color: $sky-dog-primary-color;
+    }
+}
+
+//landing
+.landing__container {
+
+    .landing_main-title,
+    .landing__know-how {
+        text-align: left;
+    }
+
+    .landing__description {
+        text-align: left;
+        width: 50%;
+    }
+
+    .landing__buttton {
+        width: 180px;
+        border-radius: 50px;
+        color: $sky-dog-white-color;
+    }
+}
+
+//Media query to mobile when browser hits 425px or less
+@media only screen and (max-width: 425px) {
+
+    .landing__container {
+
+        .landing_main-title,
+        .landing__call-action-button,
+        .landing__know-how {
+            text-align: center;
+        }
+
+        .landing__description {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+
+
+.font-weight__bold {
+    font-weight: bold;
 }
 
 .option__menu {
     margin: 15px 0 15px 0;
 }
-.button__landing--100w {
-    width: 100px;
-}
+
 .landing__card {
     display: flex;
     flex-direction: column;
@@ -69,16 +129,20 @@ a {
     width: 300px;
     height: 350px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+
     img {
         @include sky-dog-card-img();
     }
-    > * {
+
+    >* {
         @include sky-dow-children-m-10px();
     }
 }
-.children__elements--mt-15-mb-15 > * {
+
+.children__elements--mt-15-mb-15>* {
     margin: 15px 0 15px 0;
 }
+
 .p__align-left {
     text-align: left;
 }
@@ -104,10 +168,10 @@ a {
     top: 0px;
     background-color: $sky-dog-white-color;
     z-index: 5;
-    svg {
-        font-size: 24px;
-        color: $sky-dog-secondary-color;
-    }
+    // svg {
+    //     font-size: 24px;
+    //     color: $sky-dog-primary-color;
+    // }
 }
 
 .container__header-options {
@@ -118,6 +182,7 @@ a {
     width: 50%;
     height: auto;
     max-width: 150px;
+
     &:hover {
         cursor: pointer;
     }
@@ -127,15 +192,17 @@ a {
     height: 90px;
     background-color: $sky-dog-white-color;
     font-size: 32px;
-    color: $sky-dog-secondary-color;
+    color: $sky-dog-primary-color;
+
     .footer__social-media-icons {
         width: 180px;
         text-align: center;
 
-        > * {
+        >* {
             margin: 0 15px 0 15px;
         }
     }
+
     .footer__copy-right {
         font-size: 10px;
     }
@@ -147,21 +214,25 @@ a {
 
 .not-found__container {
     height: 85vh;
-    > * {
+
+    >* {
         margin: 5px;
     }
-    svg {
-        font-size: 56px;
-        color: $sky-dog-secondary-color;
-    }
+
+    // svg {
+    //     font-size: 56px;
+    //     color: $sky-dog-secondary-color;
+    // }
 }
 
 .container__product-card {
     @include sky-dog-standard-card();
+
     img {
         @include sky-dog-card-img();
     }
-    > * {
+
+    >* {
         @include sky-dow-children-m-10px();
     }
 }
@@ -171,17 +242,19 @@ a {
 }
 
 .button__whats-app-button {
-    opacity: 0.5;
     font-size: 24px;
+
     .button__whats-app-button--32px {
         font-size: 32px !important;
     }
+
     &:hover {
         cursor: pointer;
-        opacity: 1;
         color: $sky-dog-primary-color;
+
         a {
             border: none !important;
+            color: $sky-dog-secondary-color !important;
         }
     }
 }
@@ -191,7 +264,7 @@ a {
 }
 
 .login__form-container {
-    .login__form-button{
+    .login__form-button {
         width: 33%;
     }
 }
