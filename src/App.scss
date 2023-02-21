@@ -23,6 +23,7 @@ $secondary: $sky-dog-secondary-color;
     border-radius: 15px;
     width: 300px;
     min-height: 400px;
+    background-color: $sky-dog-white-color;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
@@ -41,12 +42,8 @@ body {
 }
 
 
-h1 {
+h1, h2 {
     color: $black-merlina;
-}
-
-h2 {
-    color: $sky-dog-secondary-color
 }
 
 h5,
@@ -55,20 +52,20 @@ h6 {
 }
 
 a {
-    color: $sky-dog-secondary-support-color !important;
+    color: $black-merlina !important;
     font-weight: 600 !important;
     text-decoration: none;
 
     &:hover {
-        color: $sky-dog-primary-color !important;
+        color: $pink-brownie !important;
     }
 }
 
 svg {
-    color: $sky-dog-secondary-color;
+    color: $pink-brownie;
 
     &:hover {
-        color: $sky-dog-primary-color;
+        color: $pink-nala;
     }
 }
 
@@ -81,7 +78,7 @@ svg {
     }
 
     .landing__description {
-        text-align: left;
+        text-align: justify;
         width: 50%;
     }
 
@@ -93,7 +90,7 @@ svg {
 }
 
 //Media query to mobile when browser hits 425px or less
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
 
     .landing__container {
 
@@ -129,6 +126,7 @@ svg {
     width: 300px;
     height: 350px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    background-color: $sky-dog-white-color;
 
     img {
         @include sky-dog-card-img();
@@ -168,10 +166,7 @@ svg {
     top: 0px;
     background-color: $sky-dog-white-color;
     z-index: 5;
-    // svg {
-    //     font-size: 24px;
-    //     color: $sky-dog-primary-color;
-    // }
+    height: 80px;
 }
 
 .container__header-options {
@@ -254,7 +249,7 @@ svg {
 
         a {
             border: none !important;
-            color: $sky-dog-secondary-color !important;
+            color: $pink-brownie !important;
         }
     }
 }
