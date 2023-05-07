@@ -36,7 +36,7 @@ const LandingPage = () => {
         <>
             <div className="container my-3">
                 <div className="row justify-content-center children__elements--mt-15-mb-15">
-                    <h1 className="col-12 text-center">No es lo mismo educar, que entrenar :D</h1>
+                    <h1 className="col-12 text-center">No es lo mismo educar, que entrenar</h1>
                     <img className="landing__doggy-illustration" src={skyDogDoggy} alt="" />
                     <h6 className="col-12 text-center">¿Quieres esaber cuál es la diferencia?</h6>
                     <PrimaryButton variant="secondary" text="¡Explorar!" size="sm" customCss="button__landing--100w my-1 text-light" action={() => navigate('/about')} />
