@@ -31,13 +31,13 @@ const OffCanvas = (props) => {
             nav: '/about'
         },
         {
-            name: 'Productos',
-            nav: '/products'
+            name: 'Servicios',
+            nav: '/services'
         }
     ];
 
     return (
-        <div className="d-md-none">
+        <div className="d-md-none m-5">
             <FontAwesomeIcon icon={faBars} onClick={() => setShow(true)} />
             <Offcanvas show={show} onHide={handleClose} responsive="md">
                 <Offcanvas.Header closeButton>

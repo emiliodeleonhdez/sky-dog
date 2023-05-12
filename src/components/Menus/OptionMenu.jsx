@@ -1,7 +1,6 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { useNavigate } from 'react-router-dom';
-import WhatsappButton from '../Buttons/WhatsAppButton/WhatsappButton';
 
 const OptionMenu = (props) => {
     const navigate = useNavigate();
@@ -23,7 +22,6 @@ const OptionMenu = (props) => {
                     </Nav.Link>
                 ))}
             </div>
-            <WhatsappButton />
         </>
     );
 };

@@ -1,12 +1,17 @@
 @import "./styles/vars.scss";
 
 //over-write bootstrap classes
-$primary: $sky-dog-primary-color;
+$primary: $pink-brownie;
 $secondary: $sky-dog-secondary-color;
 //
 
 @import "~bootstrap/scss/bootstrap";
 @import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+@font-face {
+  font-family: "Gotam book";
+  src: url("../public/fonts/Gotham-XLight.otf");
+}
 
 @mixin sky-dog-primary-user-picture($border-color) {
   width: 180px;
@@ -19,9 +24,11 @@ $secondary: $sky-dog-secondary-color;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border-radius: 15px;
   width: 300px;
-  height: 350px;
+  min-height: 400px;
+  background-color: $sky-dog-white-color;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
@@ -35,8 +42,9 @@ $secondary: $sky-dog-secondary-color;
   margin: 10px 0 10px 0;
 }
 
-h1 {
-  color: $sky-dog-primary-color;
+h1,
+h2 {
+  color: $black-merlina;
 }
 
 h5,
@@ -45,38 +53,87 @@ h6 {
 }
 
 a {
-  color: $sky-dog-secondary-color !important;
+  color: $black-merlina !important;
   text-decoration: none;
+
   &:hover {
-    // font-weight: bold;
-    border-bottom: 1px solid $sky-dog-secondary-color;
+    color: $pink-brownie !important;
   }
 }
 
-.option__menu {
-  margin: 15px 0 15px 0;
+svg {
+  color: $pink-brownie;
+
+  &:hover {
+    color: $pink-nala;
+  }
 }
-.button__landing--100w {
-  width: 100px;
+
+//landing
+.landing__container {
+  .landing__merli-container {
+    background-color: $pink-nala;
+    // .landing__question {
+    //     width: 50%;
+    // }
+  }
+
+  .landing__description {
+    width: 40%;
+  }
+
+  .landing__buttton {
+    width: 180px;
+    border-radius: 50px;
+    color: $sky-dog-white-color;
+  }
+  .landing__hello-container > article {
+    // width: 500px;
+  }
+  .contact-me__container {
+    .contact-me__button {
+      width: 210px;
+      font-weight: bold;
+    }
+  }
+  .contact-me__container {
+    .call-to-action__text {
+      font-weight: bold;
+    }
+  }
+  .services__container {
+    .service__display {
+      width: 900px;
+      height: 1100px;
+      background-color: $pink-nala;
+    }
+  }
 }
+
+.font-weight__bold {
+  font-weight: bold;
+}
+
 .landing__card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border-radius: 15px;
   width: 300px;
   height: 350px;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  background-color: $sky-dog-white-color;
+
   img {
     @include sky-dog-card-img();
   }
+
   > * {
     @include sky-dow-children-m-10px();
   }
 }
-.children__elements--mt-15-mb-15 > * {
-  margin: 15px 0 15px 0;
-}
+
 .p__align-left {
   text-align: left;
 }
@@ -102,30 +159,28 @@ a {
   top: 0px;
   background-color: $sky-dog-white-color;
   z-index: 5;
-  svg {
-    font-size: 24px;
-    color: $sky-dog-secondary-color;
+  height: 110px;
+
+  .header__contact-button {
+    width: 140px;
+    color: white;
+    font-weight: bold;
   }
 }
 
-.container__header-options {
-  width: 400px;
-}
-
 .logo__sky-dog {
-  width: 50%;
-  height: auto;
-  max-width: 150px;
+  width: 150px;
   &:hover {
     cursor: pointer;
   }
 }
 
 .footer__social-media {
-  height: 90px;
+  height: 110px;
   background-color: $sky-dog-white-color;
   font-size: 32px;
-  color: $sky-dog-secondary-color;
+  color: $sky-dog-primary-color;
+
   .footer__social-media-icons {
     width: 180px;
     text-align: center;
@@ -145,20 +200,19 @@ a {
 
 .not-found__container {
   height: 85vh;
+
   > * {
     margin: 5px;
-  }
-  svg {
-    font-size: 56px;
-    color: $sky-dog-secondary-color;
   }
 }
 
 .container__product-card {
   @include sky-dog-standard-card();
+
   img {
     @include sky-dog-card-img();
   }
+
   > * {
     @include sky-dow-children-m-10px();
   }
@@ -169,21 +223,53 @@ a {
 }
 
 .button__whats-app-button {
-  opacity: 0.5;
   font-size: 24px;
+
   .button__whats-app-button--32px {
     font-size: 32px !important;
   }
+
   &:hover {
     cursor: pointer;
-    opacity: 1;
     color: $sky-dog-primary-color;
+
     a {
       border: none !important;
+      color: $pink-brownie !important;
     }
   }
 }
 
 .off-canvas__anchor-text--32px {
   font-size: 32px;
+}
+
+.login__form-container {
+  .login__form-button {
+    width: 33%;
+  }
+}
+
+//Media query to mobile when browser hits 425px or less
+@media only screen and (max-width: 768px) {
+  .container__header--sticky {
+    height: 80px;
+  }
+  .landing__container {
+    .landing__description,
+    .hello__description,
+    .experience__description {
+      text-align: justify;
+      width: 100%;
+    }
+    .services__container {
+      .service__display {
+        min-width: 300px;
+        height: 500px;
+      }
+    }
+  }
+  .footer__social-media {
+      height: 80px;
+  }
 }

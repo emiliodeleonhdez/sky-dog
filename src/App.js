@@ -11,22 +11,28 @@ import PrimaryHeader from './components/Header/PrimaryHeader';
 import PrimaryFooter from './components/Footer/PrimaryFooter';
 import NotFound from './pages/404/NotFound';
 import Products from './pages/Products/Products';
-// import WhatsappButton from './components/Buttons/WhatsAppButton/WhatsappButton';
+import Login from './pages/Login/Login';
+import PaymentOk from './pages/PaymentOk/PaymentOk';
 
 function App() {
+    const showLogin = false
     return (
         <>
+        {showLogin ? <Login /> : 
             <BrowserRouter>
                 <PrimaryHeader />
-                {/* <WhatsappButton/> */}
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
-                    <Route path="/about" element={<AboutMe />} />
-                    <Route path="/products" element={<Products />} />
+                    <Route path="/login" element={<NotFound />} />
+                    <Route path="/about" element={<NotFound />} />
+                    <Route path="/services" element={<NotFound />} />
                     <Route path="/notfound" element={<NotFound />} />
+                    <Route path="/paymentok" element={<NotFound />} />
+
                 </Routes>
                 <PrimaryFooter />
             </BrowserRouter>
+            }
         </>
     );
 }
