@@ -176,7 +176,7 @@ svg {
 }
 
 .footer__social-media {
-  height: 90px;
+  height: 110px;
   background-color: $sky-dog-white-color;
   font-size: 32px;
   color: $sky-dog-primary-color;
@@ -269,5 +269,8 @@ svg {
         height: 500px;
       }
     }
+  }
+  .footer__social-media {
+      height: 80px;
   }
 }
