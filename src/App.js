@@ -23,11 +23,11 @@ function App() {
                 <PrimaryHeader />
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/about" element={<AboutMe />} />
-                    <Route path="/services" element={<Products />} />
+                    <Route path="/login" element={<NotFound />} />
+                    <Route path="/about" element={<NotFound />} />
+                    <Route path="/services" element={<NotFound />} />
                     <Route path="/notfound" element={<NotFound />} />
-                    <Route path="/paymentok" element={<PaymentOk />} />
+                    <Route path="/paymentok" element={<NotFound />} />
 
                 </Routes>
                 <PrimaryFooter />
