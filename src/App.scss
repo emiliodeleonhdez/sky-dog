@@ -1,264 +1,273 @@
-@import './styles/vars.scss';
+@import "./styles/vars.scss";
 
 //over-write bootstrap classes
 $primary: $pink-brownie;
 $secondary: $sky-dog-secondary-color;
 //
 
-@import '~bootstrap/scss/bootstrap';
-@import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+@import "~bootstrap/scss/bootstrap";
+@import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 @font-face {
-    font-family: 'Gotam book';
-    src: url("../public/fonts/Gotham-XLight.otf");
+  font-family: "Gotam book";
+  src: url("../public/fonts/Gotham-XLight.otf");
 }
 
 @mixin sky-dog-primary-user-picture($border-color) {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid $border-color;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid $border-color;
 }
 
 @mixin sky-dog-standard-card() {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    width: 300px;
-    min-height: 400px;
-    background-color: $sky-dog-white-color;
-    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 300px;
+  min-height: 400px;
+  background-color: $sky-dog-white-color;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
 @mixin sky-dog-card-img() {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
 }
 
 @mixin sky-dow-children-m-10px() {
-    margin: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 
-body {
-    background-color: $pink-nala;
-}
-
-
-h1, h2 {
-    color: $black-merlina;
+h1,
+h2 {
+  color: $black-merlina;
 }
 
 h5,
 h6 {
-    color: black;
+  color: black;
 }
 
 a {
-    color: $black-merlina !important;
-    text-decoration: none;
+  color: $black-merlina !important;
+  text-decoration: none;
 
-    &:hover {
-        color: $pink-brownie !important;
-    }
+  &:hover {
+    color: $pink-brownie !important;
+  }
 }
 
 svg {
-    color: $pink-brownie;
+  color: $pink-brownie;
 
-    &:hover {
-        color: $pink-nala;
-    }
+  &:hover {
+    color: $pink-nala;
+  }
 }
 
 //landing
 .landing__container {
+  .landing__merli-container {
+    background-color: $pink-nala;
+    // .landing__question {
+    //     width: 50%;
+    // }
+  }
 
-    .landing_main-title,
-    .landing__know-how {
-        text-align: left;
-    }
+  .landing__description {
+    width: 40%;
+  }
 
-    .landing__description {
-        text-align: justify;
-        width: 50%;
+  .landing__buttton {
+    width: 180px;
+    border-radius: 50px;
+    color: $sky-dog-white-color;
+  }
+  .landing__hello-container > article {
+    // width: 500px;
+  }
+  .contact-me__container {
+    .contact-me__button {
+      width: 210px;
+      font-weight: bold;
     }
+  }
+  .contact-me__container {
+    .call-to-action__text {
+      font-weight: bold;
+    }
+  }
+  .services__container {
+    .service__display {
+      width: 900px;
+      height: 1100px;
+      background-color: $pink-nala;
+    }
+  }
+}
 
-    .landing__buttton {
-        width: 180px;
-        border-radius: 50px;
-        color: $sky-dog-white-color;
+.font-weight__bold {
+  font-weight: bold;
+}
+
+.landing__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  background-color: $sky-dog-white-color;
+
+  img {
+    @include sky-dog-card-img();
+  }
+
+  > * {
+    @include sky-dow-children-m-10px();
+  }
+}
+
+.p__align-left {
+  text-align: left;
+}
+
+.img__sky-dog-user {
+  @include sky-dog-primary-user-picture($sky-dog-primary-color);
+}
+
+.div__steps-step-number {
+  border: 5px solid $sky-dog-primary-color;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin: 15px 0 15px 0;
+}
+
+.h6__steps-step-number {
+  color: $sky-dog-primary-color;
+}
+
+.container__header--sticky {
+  position: sticky;
+  top: 0px;
+  background-color: $sky-dog-white-color;
+  z-index: 5;
+  height: 110px;
+
+  .header__contact-button {
+    width: 140px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.logo__sky-dog {
+  width: 150px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.footer__social-media {
+  height: 90px;
+  background-color: $sky-dog-white-color;
+  font-size: 32px;
+  color: $sky-dog-primary-color;
+
+  .footer__social-media-icons {
+    width: 180px;
+    text-align: center;
+
+    > * {
+      margin: 0 15px 0 15px;
     }
+  }
+
+  .footer__copy-right {
+    font-size: 10px;
+  }
+}
+
+.landing__doggy-illustration {
+  max-width: 350px;
+}
+
+.not-found__container {
+  height: 85vh;
+
+  > * {
+    margin: 5px;
+  }
+}
+
+.container__product-card {
+  @include sky-dog-standard-card();
+
+  img {
+    @include sky-dog-card-img();
+  }
+
+  > * {
+    @include sky-dow-children-m-10px();
+  }
+}
+
+.secondary__color {
+  background-color: $sky-dog-secondary-color !important;
+}
+
+.button__whats-app-button {
+  font-size: 24px;
+
+  .button__whats-app-button--32px {
+    font-size: 32px !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $sky-dog-primary-color;
+
+    a {
+      border: none !important;
+      color: $pink-brownie !important;
+    }
+  }
+}
+
+.off-canvas__anchor-text--32px {
+  font-size: 32px;
+}
+
+.login__form-container {
+  .login__form-button {
+    width: 33%;
+  }
 }
 
 //Media query to mobile when browser hits 425px or less
 @media only screen and (max-width: 768px) {
-
-    .landing__container {
-
-        .landing_main-title,
-        .landing__call-action-button,
-        .landing__know-how {
-            text-align: center;
-        }
-
-        .landing__description {
-            text-align: center;
-            width: 100%;
-        }
+  .container__header--sticky {
+    height: 80px;
+  }
+  .landing__container {
+    .landing__description,
+    .hello__description,
+    .experience__description {
+      text-align: justify;
+      width: 100%;
     }
-}
-
-
-
-.font-weight__bold {
-    font-weight: bold;
-}
-
-.landing__card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    width: 300px;
-    height: 350px;
-    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-    background-color: $sky-dog-white-color;
-
-    img {
-        @include sky-dog-card-img();
+    .services__container {
+      .service__display {
+        min-width: 300px;
+        height: 500px;
+      }
     }
-
-    >* {
-        @include sky-dow-children-m-10px();
-    }
-}
-
-.children__elements--mt-15-mb-15>* {
-    margin: 15px 0 15px 0;
-}
-
-.p__align-left {
-    text-align: left;
-}
-
-.img__sky-dog-user {
-    @include sky-dog-primary-user-picture($sky-dog-primary-color);
-}
-
-.div__steps-step-number {
-    border: 5px solid $sky-dog-primary-color;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    margin: 15px 0 15px 0;
-}
-
-.h6__steps-step-number {
-    color: $sky-dog-primary-color;
-}
-
-.container__header--sticky {
-    position: sticky;
-    top: 0px;
-    background-color: $sky-dog-white-color;
-    z-index: 5;
-    height: 110px;
-
-    .header__contact-button {
-        width: 140px;
-        color: white;
-        font-weight: bold;
-    }
-}
-
-.logo__sky-dog {
-    width: 150px;
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.footer__social-media {
-    height: 90px;
-    background-color: $sky-dog-white-color;
-    font-size: 32px;
-    color: $sky-dog-primary-color;
-
-    .footer__social-media-icons {
-        width: 180px;
-        text-align: center;
-
-        >* {
-            margin: 0 15px 0 15px;
-        }
-    }
-
-    .footer__copy-right {
-        font-size: 10px;
-    }
-}
-
-.landing__doggy-illustration {
-    max-width: 350px;
-}
-
-.not-found__container {
-    height: 85vh;
-
-    >* {
-        margin: 5px;
-    }
-
-    // svg {
-    //     font-size: 56px;
-    //     color: $sky-dog-secondary-color;
-    // }
-}
-
-.container__product-card {
-    @include sky-dog-standard-card();
-
-    img {
-        @include sky-dog-card-img();
-    }
-
-    >* {
-        @include sky-dow-children-m-10px();
-    }
-}
-
-.secondary__color {
-    background-color: $sky-dog-secondary-color !important;
-}
-
-.button__whats-app-button {
-    font-size: 24px;
-
-    .button__whats-app-button--32px {
-        font-size: 32px !important;
-    }
-
-    &:hover {
-        cursor: pointer;
-        color: $sky-dog-primary-color;
-
-        a {
-            border: none !important;
-            color: $pink-brownie !important;
-        }
-    }
-}
-
-.off-canvas__anchor-text--32px {
-    font-size: 32px;
-}
-
-.login__form-container {
-    .login__form-button {
-        width: 33%;
-    }
+  }
 }

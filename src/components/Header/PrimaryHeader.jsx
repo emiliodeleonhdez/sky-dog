@@ -25,7 +25,7 @@ const PrimaryHeader = () => {
         <div className="container__header--sticky d-flex align-items-center justify-content-between">
             <OffCanvas anchorClasses="text-center w-100 off-canvas__anchor-text--32px" />
             <Logo/>
-            <div className="option__menu me-4 d-none d-md-flex">
+            <div className="option__menu mx-5 d-none d-md-flex">
                 <OptionMenu displayOptions={optionMenu} customClasses="d-flex align-items-center container__header-options" anchorClasses="text-center px-3" />
                 <PrimaryButton variant="primary" text="Contacto" customCss="rounded-pill header__contact-button"/>
 

@@ -37,7 +37,7 @@ const OffCanvas = (props) => {
     ];
 
     return (
-        <div className="d-md-none">
+        <div className="d-md-none m-5">
             <FontAwesomeIcon icon={faBars} onClick={() => setShow(true)} />
             <Offcanvas show={show} onHide={handleClose} responsive="md">
                 <Offcanvas.Header closeButton>
