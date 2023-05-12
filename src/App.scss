@@ -8,6 +8,11 @@ $secondary: $sky-dog-secondary-color;
 @import '~bootstrap/scss/bootstrap';
 @import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
+@font-face {
+    font-family: 'Gotam book';
+    src: url("../public/fonts/Gotham-XLight.otf");
+}
+
 @mixin sky-dog-primary-user-picture($border-color) {
     width: 180px;
     height: 180px;
@@ -53,7 +58,6 @@ h6 {
 
 a {
     color: $black-merlina !important;
-    font-weight: 600 !important;
     text-decoration: none;
 
     &:hover {
@@ -113,10 +117,6 @@ svg {
     font-weight: bold;
 }
 
-.option__menu {
-    margin: 15px 0 15px 0;
-}
-
 .landing__card {
     display: flex;
     flex-direction: column;
@@ -166,18 +166,17 @@ svg {
     top: 0px;
     background-color: $sky-dog-white-color;
     z-index: 5;
-    height: 80px;
-}
+    height: 110px;
 
-.container__header-options {
-    width: 400px;
+    .header__contact-button {
+        width: 140px;
+        color: white;
+        font-weight: bold;
+    }
 }
 
 .logo__sky-dog {
-    width: 50%;
-    height: auto;
-    max-width: 150px;
-
+    width: 150px;
     &:hover {
         cursor: pointer;
     }
