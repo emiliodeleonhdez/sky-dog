@@ -8,7 +8,7 @@ import LandingCard from "../../components/Cards/Landing/LandingCard";
 import PrimaryCarousel from "../../components/Carousel/PrimaryCarousel";
 
 //illustrations
-import skyDogDoggy from "../../assets/illustrations/sky-dog-doggy.svg";
+import landingDog from "../../assets/header/nala.PNG";
 
 const LandingPage = () => {
   //hooks
@@ -35,22 +35,28 @@ const LandingPage = () => {
   return (
     <>
       <div className="container-fluid landing__container">
-        <div className="row landing__merli-container p-2 p-sm-3 p-md-5">
-          <h1 className="col-12 font-weight__bold display-1 landing_main-title text-center text-md-start">
-            No es lo mismo <br />
-            educar que <br /> entrenar
-          </h1>
-          <p className="landing__description text-md-start">
-            Si quieres que tu perro aprenda alguna disciplina como agility, dog
-            dancing, búsqueda y rescate, etc., deberás de buscar un
-            entrenamiento formal, informado y dirigido. Si el problema con tu
-            perro es que hace sus necesidades por todos lados, le ladra a
-            personas, es agresivo con otros perros, etc., lo que necesitas es
-            educar y conocer las necesidades de tu perro y comenzar a trabajar.
-          </p>
-          <p className="landing__question text-center text-md-start">
-            ¿Cómo puedo comenzar a trabajar un tema de comportamiento?
-          </p>
+        <div className="row landing__merli-container p-2 p-sm-3 p-md-5 flex-nowrap">
+          <div className="container m-0 merli-container__description my-5">
+            <h1 className="col-12 font-weight__bold display-1 landing_main-title text-center text-md-start">
+              No es lo mismo <br />
+              educar que <br /> entrenar
+            </h1>
+            <p className="landing__description text-md-start">
+              Si quieres que tu perro aprenda alguna disciplina como agility,
+              dog dancing, búsqueda y rescate, etc., deberás de buscar un
+              entrenamiento formal, informado y dirigido. Si el problema con tu
+              perro es que hace sus necesidades por todos lados, le ladra a
+              personas, es agresivo con otros perros, etc., lo que necesitas es
+              educar y conocer las necesidades de tu perro y comenzar a
+              trabajar.
+            </p>
+            <p className="landing__question text-center text-md-start">
+              ¿Cómo puedo comenzar a trabajar un tema de comportamiento?
+            </p>
+          </div>
+          {/* <div className="w-50">
+            <img className="w-100 landing__dog" src={landingDog} alt="" />
+          </div> */}
         </div>
         <section className="container-fluid d-flex flex-nowrap flex-column flex-md-row align-items-center justify-content-center justify-content-md-around p-2 p-sm-3 p-md-5 landing__hello-container">
           <article className="container m-0 me-md-5 hello__my-name-container">
