@@ -3,6 +3,7 @@
 //over-write bootstrap classes
 $primary: $pink-brownie;
 $secondary: $sky-dog-secondary-color;
+$border-color: $black-merlina;
 //
 
 @import "~bootstrap/scss/bootstrap";
@@ -72,14 +73,11 @@ svg {
 //landing
 .landing__container {
   .landing__merli-container {
-    background-color: $pink-nala;
-    // .landing__question {
-    //     width: 50%;
-    // }
-  }
-
-  .landing__description {
-    width: 40%;
+    background-image: url("./assets/header/ONDAS_HEADER.svg");
+    background-size: auto 100%;
+    .merli-container__description{
+      width: 50%;
+    }
   }
 
   .landing__buttton {
@@ -107,7 +105,13 @@ svg {
       height: 1100px;
       background-color: $pink-nala;
     }
+
   }
+
+  // .landing__dog{
+  //   position: relative;
+  //   bottom: 315px;
+  // }
 }
 
 .font-weight__bold {
@@ -177,9 +181,9 @@ svg {
 
 .footer__social-media {
   height: 110px;
-  background-color: $sky-dog-white-color;
-  font-size: 32px;
-  color: $sky-dog-primary-color;
+  background-image: url("./assets/footer/ONDAS-FOOTER.png");
+  background-size: auto;
+
 
   .footer__social-media-icons {
     width: 180px;
@@ -264,10 +268,14 @@ svg {
     }
     .services__container {
       .service__display {
-        min-width: 300px;
+        width: 100%;
         height: 500px;
       }
     }
+  }
+  .merli-container__description {
+
+    width: 100% !important;
   }
   .footer__social-media {
       height: 80px;
