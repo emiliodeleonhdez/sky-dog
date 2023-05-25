@@ -9,6 +9,7 @@ import PrimaryCarousel from "../../components/Carousel/PrimaryCarousel";
 
 //illustrations
 import landingDog from "../../assets/header/nala.PNG";
+import ServiceCard from "../../components/Cards/Services/ServiceCard";
 
 const LandingPage = () => {
   //hooks
@@ -97,8 +98,32 @@ const LandingPage = () => {
           <h2 className="my-3 text-center text-md-start text-center text-md-start">
             Servicios
           </h2>
-          <div className="d-flex justify-content-center justify-content-md-start my-3">
+          <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-start my-3">
             <div className="service__display rounded-4"></div>
+            <ServiceCard
+              id="1"
+              cardTitle="Consultas de comportamiento"
+              cardBody="Si no entiendes el porqué tu cachorro es inquieto, te pone
+              de nervios debido a que no sabes que hacer ese nuevo
+              miembro de la familia o, porque simplemente no conoces
+              muy bien y/o quieres aprender más acerca de las
+              necesidades de los cachorros, ¡este curso es para ustedes"
+            />
+            <ServiceCard
+              id="2"
+              cardTitle="Curso para cachorritos"
+              cardBody="Si no entiendes el porqué tu cachorro es inquieto, te pone
+              de nervios debido a que no sabes que hacer ese nuevo
+              miembro de la familia o, porque simplemente no conoces
+              muy bien y/o quieres aprender más acerca de las
+              necesidades de los cachorros, ¡este curso es para ustedes"
+            />
+            <ServiceCard
+              id="3"
+              cardTitle="Consulta y asesoría para
+              manejo Fear Free®"
+              cardBody="Te ayudamos a encontrar la mejor opción para tu perrito."
+            />
           </div>
         </section>
       </div>
