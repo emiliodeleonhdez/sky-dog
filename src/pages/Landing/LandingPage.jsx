@@ -132,7 +132,7 @@ const LandingPage = () => {
         </div>
         <section>
           <h2 className="my-3 text-center py-5">Recomendaciones</h2>
-          <div className="recomendation__container d-flex flex-column flex-md-row justify-content-center align-items-center">
+          <div className="recomendation__container d-flex flex-column flex-md-row justify-content-center align-items-center my-5 mx-md-5">
             <Recomendation
               owner="Miguel Castillo"
               review="Sin duda un espacio seguro que recomiendo con toda confianza."
