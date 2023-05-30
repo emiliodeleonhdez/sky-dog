@@ -43,6 +43,11 @@ $border-color: $black-merlina;
   margin: 10px 0 10px 0;
 }
 
+@mixin standard-button() {
+  width: 210px;
+  font-weight: bold;
+}
+
 h1,
 h2 {
   color: $black-merlina;
@@ -90,8 +95,7 @@ svg {
   }
   .contact-me__container {
     .contact-me__button {
-      width: 210px;
-      font-weight: bold;
+      @include standard-button();
     }
   }
   .contact-me__container {
@@ -101,17 +105,28 @@ svg {
   }
   .services__container {
     .service__display {
-      width: 900px;
-      height: 1100px;
+      width: 100%;
       background-color: $pink-nala;
     }
 
   }
 
-  // .landing__dog{
-  //   position: relative;
-  //   bottom: 315px;
-  // }
+  .service__card-container {
+    .service__card {
+      width: 600px;
+      height: 180px;
+    }
+  }
+
+  .book__button {
+    @include standard-button();
+  }
+  
+  .recomendation__card {
+    width: 430px;
+    min-height: 200px;
+    max-height: 400px;
+  }
 }
 
 .font-weight__bold {
@@ -270,6 +285,13 @@ svg {
       .service__display {
         width: 100%;
         height: 500px;
+      }
+    }
+
+    .service__card-container {
+      .service__card {
+        width: 100%;
+        height: 100%;
       }
     }
   }
