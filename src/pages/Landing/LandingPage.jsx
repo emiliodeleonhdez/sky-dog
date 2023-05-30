@@ -4,6 +4,7 @@ import React from "react";
 
 //components
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
+import Recomendation from "../../components/Cards/Recomendations/Recomendation";
 
 //illustrations
 import ServiceCard from "../../components/Cards/Services/ServiceCard";
@@ -92,7 +93,7 @@ const LandingPage = () => {
           <h2 className="my-3 text-center text-md-start text-center text-md-start">
             Servicios
           </h2>
-          <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-between my-3 services__main-container">
+          <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-md-between my-3 services__main-container">
             <div className="service__display rounded-4"></div>
             <section className="d-flex flex-column align-items-end service__card-container ms-md-3">
               <ServiceCard
@@ -120,6 +121,30 @@ const LandingPage = () => {
                 cardBody="Te ayudamos a encontrar la mejor opción para tu perrito."
               />
             </section>
+          </div>
+        </section>
+        <div className="d-flex justify-content-center my-5">
+          <PrimaryButton
+            variant="primary"
+            text="¡Agenda una cita!"
+            customCss="text-white rounded-pill book__button"
+          />
+        </div>
+        <section>
+          <h2 className="my-3 text-center py-5">Recomendaciones</h2>
+          <div className="recomendation__container d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <Recomendation
+              owner="Miguel Castillo"
+              review="Sin duda un espacio seguro que recomiendo con toda confianza."
+            />
+            <Recomendation
+              owner="Daniela Mata"
+              review="La Dogtora Ivonne es una profesional, comprometida, preparada, empática."
+            />
+            <Recomendation
+              owner="Jimena Campoy"
+              review="Mi perrita Merlina y yo llegamos con la Dra Ivonne a Sky-Dog® Educación Canina hace casi 2 años..."
+            />
           </div>
         </section>
       </div>
