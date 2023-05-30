@@ -43,6 +43,11 @@ $border-color: $black-merlina;
   margin: 10px 0 10px 0;
 }
 
+@mixin standard-button() {
+  width: 210px;
+  font-weight: bold;
+}
+
 h1,
 h2 {
   color: $black-merlina;
@@ -90,8 +95,7 @@ svg {
   }
   .contact-me__container {
     .contact-me__button {
-      width: 210px;
-      font-weight: bold;
+      @include standard-button();
     }
   }
   .contact-me__container {
@@ -102,7 +106,6 @@ svg {
   .services__container {
     .service__display {
       width: 100%;
-      height: 1100px;
       background-color: $pink-nala;
     }
 
@@ -110,11 +113,19 @@ svg {
 
   .service__card-container {
     .service__card {
-      width: 300px;
+      width: 600px;
+      height: 180px;
     }
   }
 
-
+  .book__button {
+    @include standard-button();
+  }
+  
+  .recomendation__card {
+    width: 300px;
+    height: 200px;
+  }
 }
 
 .font-weight__bold {
@@ -279,6 +290,7 @@ svg {
     .service__card-container {
       .service__card {
         width: 100%;
+        height: 100%;
       }
     }
   }
