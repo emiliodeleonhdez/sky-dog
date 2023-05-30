@@ -1,37 +1,34 @@
 //imports
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 //components
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
-import LandingCard from "../../components/Cards/Landing/LandingCard";
-import PrimaryCarousel from "../../components/Carousel/PrimaryCarousel";
 
 //illustrations
-import landingDog from "../../assets/header/nala.PNG";
 import ServiceCard from "../../components/Cards/Services/ServiceCard";
 
 const LandingPage = () => {
   //hooks
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const landingCards = [
-    {
-      img: "",
-      title: "Start with step 1",
-      description: "Nunc mattis feugiat ex scelerisque congue.",
-    },
-    {
-      img: "",
-      title: "Then step 2",
-      description: "Nunc mattis feugiat ex scelerisque congue.",
-    },
-    {
-      img: "",
-      title: "Finally, step 3",
-      description: "Nunc mattis feugiat ex scelerisque congue.",
-    },
-  ];
+  // const landingCards = [
+  //   {
+  //     img: "",
+  //     title: "Start with step 1",
+  //     description: "Nunc mattis feugiat ex scelerisque congue.",
+  //   },
+  //   {
+  //     img: "",
+  //     title: "Then step 2",
+  //     description: "Nunc mattis feugiat ex scelerisque congue.",
+  //   },
+  //   {
+  //     img: "",
+  //     title: "Finally, step 3",
+  //     description: "Nunc mattis feugiat ex scelerisque congue.",
+  //   },
+  // ];
 
   return (
     <>
@@ -55,9 +52,6 @@ const LandingPage = () => {
               ¿Cómo puedo comenzar a trabajar un tema de comportamiento?
             </p>
           </div>
-          {/* <div className="w-50">
-            <img className="w-100 landing__dog" src={landingDog} alt="" />
-          </div> */}
         </div>
         <section className="container-fluid d-flex flex-nowrap flex-column flex-md-row align-items-center justify-content-center justify-content-md-around p-2 p-sm-3 p-md-5 landing__hello-container">
           <article className="container m-0 me-md-5 hello__my-name-container">
@@ -79,7 +73,7 @@ const LandingPage = () => {
             </p>
           </article>
         </section>
-        <section className="contact-me__container container-fluid d-flex flex-column justify-content-center align-items-center my-5">
+        <section className="contact-me__container container-fluid d-flex flex-column justify-content-center align-items-center  p-2 p-sm-3 p-md-5">
           <PrimaryButton
             variant="primary"
             text="¡Contáctame!"
@@ -87,7 +81,7 @@ const LandingPage = () => {
           />
           <div className="call-to-action__container my-5">
             <p className="m-0 text-primary call-to-action__text">
-              MÁS D E 7 AÑOS DE EXPERIENCIA
+              MÁS DE 7 AÑOS DE EXPERIENCIA
             </p>
             <p className="m-0 text-primary call-to-action__text">
               CUIDANDO Y EDUCANDO PELUDOS
@@ -98,32 +92,34 @@ const LandingPage = () => {
           <h2 className="my-3 text-center text-md-start text-center text-md-start">
             Servicios
           </h2>
-          <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-start my-3">
+          <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-between my-3 services__main-container">
             <div className="service__display rounded-4"></div>
-            <ServiceCard
-              id="1"
-              cardTitle="Consultas de comportamiento"
-              cardBody="Si no entiendes el porqué tu cachorro es inquieto, te pone
+            <section className="d-flex flex-column align-items-end service__card-container ms-md-3">
+              <ServiceCard
+                id="1"
+                cardTitle="Consultas de comportamiento"
+                cardBody="Si no entiendes el porqué tu cachorro es inquieto, te pone
               de nervios debido a que no sabes que hacer ese nuevo
               miembro de la familia o, porque simplemente no conoces
               muy bien y/o quieres aprender más acerca de las
               necesidades de los cachorros, ¡este curso es para ustedes"
-            />
-            <ServiceCard
-              id="2"
-              cardTitle="Curso para cachorritos"
-              cardBody="Si no entiendes el porqué tu cachorro es inquieto, te pone
+              />
+              <ServiceCard
+                id="2"
+                cardTitle="Curso para cachorritos"
+                cardBody="Si no entiendes el porqué tu cachorro es inquieto, te pone
               de nervios debido a que no sabes que hacer ese nuevo
               miembro de la familia o, porque simplemente no conoces
               muy bien y/o quieres aprender más acerca de las
               necesidades de los cachorros, ¡este curso es para ustedes"
-            />
-            <ServiceCard
-              id="3"
-              cardTitle="Consulta y asesoría para
+              />
+              <ServiceCard
+                id="3"
+                cardTitle="Consulta y asesoría para
               manejo Fear Free®"
-              cardBody="Te ayudamos a encontrar la mejor opción para tu perrito."
-            />
+                cardBody="Te ayudamos a encontrar la mejor opción para tu perrito."
+              />
+            </section>
           </div>
         </section>
       </div>
