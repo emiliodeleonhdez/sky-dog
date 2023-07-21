@@ -15,7 +15,7 @@ const PrimaryHeader = () => {
             nav: '/services'
         },
         {
-            name: 'Galería!',
+            name: 'Galería',
             nav: '/about'
         }
 
