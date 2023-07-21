@@ -36,9 +36,9 @@ const LandingPage = () => {
   return (
     <>
       <div className="container-fluid landing__container">
-        <div className="row landing__merli-container p-2 p-sm-3 p-md-5 pb-md-0 flex-nowrap flex-column flex-lg-row">
-          <div className="container m-0 merli-container__description my-5">
-            <h1 className="col-12 font-weight__bold display-1 landing_main-title text-center text-md-start">
+        <div className="row landing__merli-container align-items-center align-items-lg-end p-md-5 pb-md-0 flex-nowrap flex-column flex-lg-row">
+          <div className="container col-12 col-lg-6 m-0 merli-container__description my-5">
+            <h1 className="col-12 font-weight__bold display-1 landing_main-title text-center text-lg-start">
               No es lo mismo <br />
               educar que <br /> entrenar
             </h1>
@@ -55,7 +55,7 @@ const LandingPage = () => {
               ¿Cómo puedo comenzar a trabajar un tema de comportamiento?
             </p>
           </div>
-          <div className="landing__photo">
+          <div className="col-12 col-lg-6 landing__photo d-flex flex-column justify-content-end">
             <img src={Merli} alt="" />
           </div>
         </div>
