@@ -78,11 +78,12 @@ svg {
 //landing
 .landing__container {
   .landing__merli-container {
-    background-image: url("./assets/header/ONDAS_HEADER.svg");
-    background-size: auto 100%;
-    .merli-container__description{
-      width: 50%;
-    }
+    // background-image: url("./assets/header/ONDAS_HEADER.svg");
+    // background-size: auto 100%;
+    background: $pink-nala;
+    // .merli-container__description{
+    //   width: 50%;
+    // }
   }
 
   .landing__buttton {
@@ -90,9 +91,7 @@ svg {
     border-radius: 50px;
     color: $sky-dog-white-color;
   }
-  .landing__hello-container > article {
-    // width: 500px;
-  }
+
   .contact-me__container {
     .contact-me__button {
       @include standard-button();
@@ -126,6 +125,12 @@ svg {
     width: 430px;
     min-height: 200px;
     max-height: 400px;
+  }
+  .landing__photo {
+    width: 50%;
+    > img {
+      width: 100%;
+    }
   }
 }
 
@@ -294,12 +299,20 @@ svg {
         height: 100%;
       }
     }
+    .landing__photo {
+      width: 100%;
+      > img {
+        width: 100%;
+      }
+    }
   }
-  .merli-container__description {
+  // .merli-container__description {
 
-    width: 100% !important;
-  }
+  //   width: 100% !important;
+  // }
   .footer__social-media {
       height: 80px;
   }
+
+
 }
