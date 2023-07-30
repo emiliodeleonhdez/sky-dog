@@ -1,13 +1,14 @@
 import React from 'react';
-// import logo from '../../../assets/logo/sky-dog-logo.png';
 import logo from '../../../assets/logo/main_logo.svg';
+import whiteLogo from '../../../assets/logo/main_logo-white.svg';
 import { useNavigate } from 'react-router-dom';
 
-const Logo = () => {
+const Logo = (props) => {
     const navigate = useNavigate();
+    const {customClass, isWhite} = props
     return (
-        <div className='logo__container mx-5'>
-            <img className="logo__sky-dog" onClick={() => navigate("/")} src={logo} alt="logo" />
+        <div className='logo__container'>
+            <img className={customClass} onClick={() => navigate("/")} src={isWhite ? whiteLogo : logo} alt="logo" />
         </div>
     );
 };

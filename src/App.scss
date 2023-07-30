@@ -67,13 +67,13 @@ a {
   }
 }
 
-svg {
-  color: $pink-brownie;
+// svg {
+//   color: $pink-brownie;
 
-  &:hover {
-    color: $pink-nala;
-  }
-}
+//   &:hover {
+//     color: $pink-nala;
+//   }
+// }
 
 //landing
 .landing__container {
@@ -107,7 +107,6 @@ svg {
       width: 100%;
       background-color: $pink-nala;
     }
-
   }
 
   .service__card-container {
@@ -120,7 +119,7 @@ svg {
   .book__button {
     @include standard-button();
   }
-  
+
   .recomendation__card {
     width: 430px;
     min-height: 200px;
@@ -200,21 +199,22 @@ svg {
 }
 
 .footer__social-media {
-  height: 110px;
-  background-image: url("./assets/footer/ONDAS-FOOTER.png");
-  background-size: auto;
+  background-color: $primary;
 
-
-  .footer__social-media-icons {
-    width: 180px;
-    text-align: center;
-
-    > * {
-      margin: 0 15px 0 15px;
-    }
-  }
   .footer__copy-right {
     font-size: 10px;
+  }
+  .logo__sky-dog--small {
+    width: 150px;footer__social-media-icons
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .footer__social-media-icons {
+    .foooter__icon--white{
+      font-size: 32px;
+      color: white;
+    }
   }
 }
 
@@ -306,13 +306,4 @@ svg {
       }
     }
   }
-  // .merli-container__description {
-
-  //   width: 100% !important;
-  // }
-  .footer__social-media {
-      height: 80px;
-  }
-
-
 }
